@@ -34,8 +34,9 @@
       --cream: #f5f0e8;
       --white: #ffffff;
       --gray-soft: #8a9bb0;
-      --accent: #4a9eda;
+      --accent: #c9a84c;
       --text-body: #ccd6f6;
+      --bg-gradient: linear-gradient(105deg, #0a1628 0%, #0d1f3c 30%, #3d2608 62%, #c9a84c 100%);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -44,7 +45,8 @@
 
     body {
       font-family: 'DM Sans', sans-serif;
-      background: var(--navy);
+      background: var(--bg-gradient);
+      background-attachment: fixed;
       color: var(--text-body);
       overflow-x: hidden;
     }
@@ -424,7 +426,7 @@
     }
 
     .about-card {
-      background: var(--navy-mid);
+      background: rgba(17, 34, 64, 0.82);
       border: 1px solid rgba(255,255,255,0.07);
       border-radius: 8px;
       padding: 40px;
@@ -479,7 +481,7 @@
     /* ─── SERVICES ─── */
     #servicios {
       border-top: 1px solid rgba(255,255,255,0.05);
-      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 100%);
+      background: rgba(10, 22, 40, 0.45);
     }
 
     #servicios > .section-wrapper {
@@ -623,7 +625,7 @@
     /* ─── EXPERIENCE ─── */
     #experiencia {
       border-top: 1px solid rgba(255,255,255,0.05);
-      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 100%);
+      background: rgba(10, 22, 40, 0.45);
     }
 
     .exp-timeline {
@@ -715,7 +717,7 @@
     }
 
     .cert-card {
-      background: var(--navy-mid);
+      background: rgba(17, 34, 64, 0.82);
       border: 1px solid rgba(255,255,255,0.07);
       border-left: 3px solid var(--gold);
       border-radius: 0 8px 8px 0;
@@ -768,7 +770,7 @@
     }
 
     .portfolio-card {
-      background: var(--navy-mid);
+      background: rgba(17, 34, 64, 0.82);
       border: 1px solid rgba(255,255,255,0.07);
       border-radius: 12px;
       overflow: hidden;
@@ -783,7 +785,7 @@
     .portfolio-preview {
       position: relative;
       height: 200px;
-      background: linear-gradient(135deg, #0d1f3c 0%, #1a3a6e 50%, #0d1f3c 100%);
+      background: linear-gradient(135deg, #0a1628 0%, #1a2f54 50%, #3d2608 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -977,7 +979,7 @@
     }
 
     .producto-card {
-      background: var(--navy-mid);
+      background: rgba(17, 34, 64, 0.88);
       border: 1px solid rgba(255,255,255,0.07);
       border-radius: 12px;
       overflow: hidden;
@@ -1062,7 +1064,7 @@
       left: 50%;
       transform: translate(-50%, -48%) scale(0.96);
       width: min(820px, 94vw);
-      background: var(--navy-mid);
+      background: rgba(17, 34, 64, 0.88);
       border: 1px solid rgba(201,168,76,0.25);
       border-radius: 14px;
       z-index: 301;
@@ -1570,7 +1572,7 @@
       bottom: 0;
       width: 420px;
       max-width: 100vw;
-      background: var(--navy-mid);
+      background: rgba(17, 34, 64, 0.88);
       border-left: 1px solid rgba(201,168,76,0.2);
       z-index: 201;
       display: flex;
@@ -2371,11 +2373,11 @@
           </div>
         </div>
 
-        <!-- APP 3: BarberApp -->
+        <!-- APP 3: ReservApp -->
         <div class="producto-card">
           <div class="producto-preview-simple">
             <div class="producto-preview-glow" style="background:#c9a84c;"></div>
-            <div class="producto-preview-icon">✂️</div>
+            <div class="producto-preview-icon">📅</div>
             <span class="producto-live-badge-top">● En vivo</span>
             <span class="producto-tool-tag" style="display:inline-flex;align-items:center;gap:6px;">
               <img src="ADC_Icono.png" alt="AD" style="height:18px;width:auto;">
@@ -2383,31 +2385,31 @@
             </span>
           </div>
           <div class="producto-card-body">
-            <div class="producto-card-category">Barberías · SaaS</div>
-            <h3 class="producto-card-title">BarberApp</h3>
-            <p class="producto-card-desc">Sistema de gestión para barberías con reservas en línea, control de citas por barbero, link público para clientes y panel de administración. Multi-barbería, listo para usar.</p>
+            <div class="producto-card-category">Reservas · SaaS</div>
+            <h3 class="producto-card-title">ReservApp</h3>
+            <p class="producto-card-desc">Sistema de gestión de reservas en línea para negocios de servicios. Control de citas por empleado, link público para clientes y panel de administración. Multi-negocio, listo para usar.</p>
             <div class="producto-card-tags">
               <span class="producto-tag">React</span>
               <span class="producto-tag">Supabase</span>
               <span class="producto-tag">Multi-tenant</span>
               <span class="producto-tag">Reservas online</span>
             </div>
-            <div class="plan-selector" id="plans-barber">
-              <div class="plan-option selected" data-product="barber" data-plan="mensual" data-price="20000" onclick="selectPlan(this)">
+            <div class="plan-selector" id="plans-reservapp">
+              <div class="plan-option selected" data-product="reservapp" data-plan="mensual" data-price="20000" onclick="selectPlan(this)">
                 <div class="plan-option-label">Mensual</div>
                 <div class="plan-option-price">$20.000</div>
               </div>
-              <div class="plan-option" data-product="barber" data-plan="anual" data-price="200000" onclick="selectPlan(this)">
+              <div class="plan-option" data-product="reservapp" data-plan="anual" data-price="200000" onclick="selectPlan(this)">
                 <div class="plan-option-label">Anual</div>
                 <div class="plan-option-price">$200.000</div>
                 <div class="plan-option-save">Ahorra $40.000</div>
               </div>
             </div>
-            <button class="btn-add-cart" onclick="addToCart('barber')">
+            <button class="btn-add-cart" onclick="addToCart('reservapp')">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
               Agregar al carrito
             </button>
-            <button class="btn-launch" onclick="openModal('barber')" style="margin-top:10px;">
+            <button class="btn-launch" onclick="openModal('reservapp')" style="margin-top:10px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
               Ver demo
             </button>
@@ -2639,21 +2641,20 @@
         title: 'Aplicación de Recaudos',
         subtitle: 'Sistema de gestión de cobros y tarjetas',
         slides: [
-          { src: 'Recaudo Inicio.png', caption: '01 · Pantalla de acceso al sistema de cobros' },
-          { src: 'Recaudo 1.png', caption: '02 · Menú principal: tarjetas, historial, cuotas y configuración' },
-          { src: 'Recaudo 2.png', caption: '03 · Lista de tarjetas con saldo, ruta, código y fecha de próximo cobro' },
-          { src: 'Recaudo 3.png', caption: '04 · Detalle de tarjeta: registra abonos y consulta cuotas pagadas' },
-          { src: 'Recaudo 4.png', caption: '05 · Historial filtrable con total recaudado y exportación' },
+          { src: 'Recaudos (4).png', caption: '01 · Login — acceso al sistema de cobros Analítica Digital' },
+          { src: 'Recaudos (3).png', caption: '02 · Panel principal — tarjetas, historial, cuotas del día e instalación' },
+          { src: 'Recaudos (2).png', caption: '03 · Pedir tarjeta — formulario con monto, interés, cuotas y frecuencia' },
+          { src: 'Recaudos (1).png', caption: '04 · Detalle de tarjeta — registra abonos y consulta cuotas pagadas' },
         ]
       },
-      barber: {
-        title: 'BarberApp',
-        subtitle: 'Sistema de gestión para barberías · Reservas online',
+      reservapp: {
+        title: 'ReservApp',
+        subtitle: 'Sistema de gestión de reservas · Multi-negocio',
         slides: [
-          { src: 'Inicio.png', caption: '01 · Página de inicio — perfil de la barbería y servicios disponibles' },
-          { src: 'Citas.png', caption: '02 · Panel de citas — filtro por barbero, estado y estadísticas' },
-          { src: 'Planes.png', caption: '03 · Planes de suscripción — Básico, Premium y Pro' },
-          { src: 'Configurar.png', caption: '04 · Configuración — perfil, barberos, servicios y horarios' },
+          { src: 'Reservaap (4).png', caption: '01 · Login — acceso exclusivo para negocios registrados' },
+          { src: 'Reservaap (1).png', caption: '02 · Página pública — agenda de citas para tus clientes' },
+          { src: 'Reservaap (2).png', caption: '03 · Panel admin — estadísticas de agendamientos y calificación' },
+          { src: 'Reservaap (3).png', caption: '04 · Configuración — perfil, empleados, servicios y horarios' },
         ]
       }
     };
@@ -2751,10 +2752,10 @@
         icon: '✨',
         plans: { mensual: 20000, anual: 200000 }
       },
-      barber: {
-        name: 'BarberApp',
-        icon: '✂️',
-        plans: { mensual: 20000, anual: 300000 }
+      reservapp: {
+        name: 'ReservApp',
+        icon: '📅',
+        plans: { mensual: 20000, anual: 200000 }
       }
     };
 
